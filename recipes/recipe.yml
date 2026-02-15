@@ -10,8 +10,6 @@ modules:
       - firefox
       - firefox-langpacks
       - gnome-system-monitor
-      - malcontent
-      - malcontent-control
       - toolbox
     install:
       - fastfetch
