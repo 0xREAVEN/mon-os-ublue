@@ -123,4 +123,9 @@ modules:
     upgrade-interval: '1d'     
     brew-analytics: false
 
+  - type: files
+    files:
+      - source: usr
+        destination: /usr
+
   - type: signing
