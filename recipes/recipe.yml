@@ -26,7 +26,6 @@ modules:
       # ---Utilitaires de base ---
       - distrobox
       - firewall-config
-      - bbrew
 
       # --- Thèmes ---
       - papirus-icon-theme
