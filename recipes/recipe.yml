@@ -84,7 +84,7 @@ modules:
           - com.vysp3r.ProtonPlus
           - io.github.benjamimgois.goverlay
 
- - type: brew
+  - type: brew
     install:
       - Valkyrie00/homebrew-bbrew/bbre
 
