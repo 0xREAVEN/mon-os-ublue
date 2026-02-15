@@ -5,7 +5,10 @@ image-version: 43
 
 modules:
   - type: rpm-ostree
+    repos:
+      - https://copr.fedorainfracloud.org/coprs/peterwu/rendezvous/repo/fedora-43/peterwu-rendezvous-fedora-43.repo
     remove:
+      # ---Les applications GNOME inutiles ---
       - gnome-tour
       - firefox
       - firefox-langpacks
@@ -14,18 +17,42 @@ modules:
       - htop
       - nvtop
       - yelp
+      - gnome-software
+      - gnome-software-rpm-ostree
     install:
-      - fastfetch
+      # ---Utilitaires de base ---
       - distrobox
       - firewall-config
       - steam-devices
+      - bbrew
+
+      # --- Thèmes ---
       - papirus-icon-theme
+      - bibata-cursor-themes
+
+      # --- L'écosystème Universal Blue (La magie !) ---
+      - ublue-os-just
+      - ublue-brew
+      - ublue-fastfetch
+      - ublue-bling
+      - ublue-os-udev-rules
+      - ublue-os-media-automount-udev
+      
+      # --- Services d'automatisation (Zéro maintenance) ---
+      - uupd
+      - ublue-setup-services
+      - ublue-motd
+
+      # --- Le Pack Gaming ---
+      - gamescope
+      - mangohud
+      - lact
 
   - type: default-flatpaks
     configurations:
       - scope: system
         install:
-          # === Applications GNOME ===
+          # --- Applications GNOME ---
           - org.gnome.Calculator
           - org.gnome.Calendar
           - org.gnome.Characters
@@ -36,24 +63,23 @@ modules:
           - org.gnome.baobab
           - org.gnome.Papers
           
-          # === Outils système ===
+          # --- Outils système ---
           - io.missioncenter.MissionCenter
-          - it.mijorus.gearleve
+          - it.mijorus.gearlever
           - io.github.flattool.Warehouse
           - io.github.flattool.Ignition
           - com.mattjakeman.ExtensionManager
           - com.github.tchx84.Flatseal
-          - io.github.ilya_zlobintsev.LACT
 
-          # === Theme ===
+          # --- Thèmes ---
           - org.gtk.Gtk3theme.adw-gtk3-dark
           - org.gtk.Gtk3theme.adw-gtk3
 
-          # === Virtualisation ===
+          # --- Virtualisation ---
           - com.ranfdev.DistroShelf
           - org.gnome.Boxes
           
-          # === Applications ===
+          # --- Applications ---
           - org.signal.Signal
           - org.remmina.Remmina
           - org.raspberrypi.rpi-imager
@@ -78,7 +104,7 @@ modules:
           - com.discordapp.Discord
           - com.bitwarden.desktop
 
-          # === Gaming ===
+          # --- Gaming ---
           - com.valvesoftware.Steam
           - com.heroicgameslauncher.hgl
           - com.vysp3r.ProtonPlus
@@ -90,5 +116,10 @@ modules:
     auto-upgrade: true       
     upgrade-interval: '1d'     
     brew-analytics: false
+
+  - type: systemd
+    system:
+      enabled:
+        - lactd.service
 
   - type: signing
