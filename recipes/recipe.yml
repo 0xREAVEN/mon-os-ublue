@@ -85,7 +85,10 @@ modules:
           - io.github.benjamimgois.goverlay
 
   - type: brew
-    install:
-      - Valkyrie00/homebrew-bbrew/bbre
+    auto-update: true        
+    update-interval: '6h'     
+    auto-upgrade: true       
+    upgrade-interval: '1d'     
+    brew-analytics: false
 
   - type: signing
