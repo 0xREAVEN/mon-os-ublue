@@ -15,9 +15,10 @@ modules:
       - fastfetch
 
   - type: default-flatpaks
-    system:
-      install:
-        - org.mozilla.firefox
-        - com.discordapp.Discord
+    configurations:
+      - scope: system
+        install:
+          - org.mozilla.firefox
+          - com.discordapp.Discord
 
   - type: signing
