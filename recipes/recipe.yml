@@ -1,7 +1,7 @@
 name: mon-os-ublue
 description: Mon image Fedora
 base-image: ghcr.io/bazzite/bazzite-gnome
-image-version: stable
+image-version: latest
 
 modules:
   - type: rpm-ostree
