@@ -1,7 +1,7 @@
 [org/gnome/desktop/interface]
 # --- Le Thème et les Icônes ---
 icon-theme='Papirus-Dark'
-cursor-theme='Bibata-Modern-Ice
+cursor-theme='Bibata-Modern-Ice'
 color-scheme='prefer-dark'
 
 # --- Les Polices Noto ---
