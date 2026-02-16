@@ -31,6 +31,7 @@ modules:
       # --- Thèmes ---
       - papirus-icon-theme
       - bibata-cursor-themes
+      - adw-gtk3-theme
       - google-noto-sans-mono-fonts
       - google-noto-emoji-fonts
 
@@ -75,6 +76,8 @@ modules:
           - org.gnome.Lollypop
           - org.gnome.Evolution
           - org.gnome.TextEditor
+          - org.gnome.Loupe
+          - org.gnome.SimpleScan
           
           # --- Outils système ---
           - io.missioncenter.MissionCenter
