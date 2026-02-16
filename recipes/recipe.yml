@@ -65,6 +65,11 @@ modules:
           - org.gnome.Weather
           - org.gnome.baobab
           - org.gnome.Papers
+          - org.gnome.NautilusPreviewer
+          - org.gnome.font-viewer
+          - org.gnome.Showtime
+          - org.gnome.Lollypop
+          - org.gnome.Evolution
           
           # --- Outils système ---
           - io.missioncenter.MissionCenter
@@ -90,8 +95,6 @@ modules:
           - org.remmina.Remmina
           - org.raspberrypi.rpi-imager
           - org.onlyoffice.desktopeditors
-          - org.gnome.Lollypop
-          - org.gnome.Evolution
           - org.gimp.GIMP
           - org.freecad.FreeCAD
           - org.deluge_torrent.deluge
@@ -115,6 +118,8 @@ modules:
           - com.heroicgameslauncher.hgl
           - com.vysp3r.ProtonPlus
           - io.github.benjamimgois.goverlay
+          - org.freedesktop.Platform.VulkanLayer.MangoHud
+          - org.freedesktop.Platform.VulkanLayer.vkBasalt
 
   - type: brew
     auto-update: true        
@@ -125,7 +130,7 @@ modules:
 
   - type: files
     files:
-      - source: usr
-        destination: /usr
+      - source: system
+        destination: /
 
   - type: signing
