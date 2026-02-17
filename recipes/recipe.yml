@@ -1,5 +1,5 @@
-name: mon-os-ublue
-description: Mon image Fedora
+name: silverbuild
+description: L'alliance parfaite entre Fedora Silverblue et BlueBuild, pour mes besoins.
 base-image: ghcr.io/ublue-os/silverblue-main
 image-version: 43
 
