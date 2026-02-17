@@ -1,5 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Steam
-Exec=flatpak run com.valvesoftware.Steam -silent
-NoDisplay=true
