@@ -156,5 +156,9 @@ modules:
       - "chmod +x /usr/bin/scb"
       # --- Compilation des réglages GNOME (Thèmes, Dock) ---
       - "dconf update"
+      # --- On ajoute Flathub ---
+      - "flatpak remote-add --if-not-exists --system flathub https://dl.flathub.org/repo/flathub.flatpakrepo"
+      # --- Tuer flatpak setup ---
+      - "systemctl mask system-flatpak-setup.service"
 
   - type: signing
