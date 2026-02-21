@@ -38,6 +38,10 @@ modules:
       - distrobox
       - firewall-config
       - fastfetch
+      - unar
+      - fastboot
+      - adb
+      - gparted
       # --- Thèmes ---
       - papirus-icon-theme
       - bibata-cursor-themes
@@ -59,6 +63,9 @@ modules:
       - gnome-shell-extension-dash-to-dock
       - gnome-shell-extension-gsconnect
       - gnome-shell-extension-user-theme
+      # --- Terminal ---
+      - fish
+      - starship
 
   - type: default-flatpaks
     configurations:
